@@ -1,6 +1,5 @@
-package LintCode.strStr;
+package LeetCode.longestSubstringWithoutRepeatingCharacters.strStr;
 
-import LeetCode.strStr.Solution;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -31,6 +30,12 @@ public class SolutionTest {
     public void test4() {
         Solution s = new Solution();
         int ret = s.strStr("source", "rced");
+        assertEquals(-1, ret);
+    }
+    @Test
+    public void test5() {
+        Solution s = new Solution();
+        int ret = s.strStr("a", "");
         assertEquals(-1, ret);
     }
 
