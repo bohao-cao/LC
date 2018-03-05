@@ -11,6 +11,7 @@ Given a string, find the length of the longest substring without repeating chara
 
         Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring,
         "pwke" is a subsequence and not a substring.
+        https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 */
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
