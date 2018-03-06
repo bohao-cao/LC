@@ -1,4 +1,4 @@
-package LeetCode.longestSubstringWithoutRepeatingCharacters.strStr;
+package LeetCode.longestSubstringWithoutRepeatingCharacters;
 
 /*
 Given a string, find the length of the longest substring without repeating characters.
@@ -14,7 +14,7 @@ Given a string, find the length of the longest substring without repeating chara
         https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 */
 public class Solution {
-    public int lengthOfLongestSubstring(String s) {
-
-    }
+//    public int lengthOfLongestSubstring(String s) {
+//
+//    }
 }
