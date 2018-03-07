@@ -1,4 +1,4 @@
-package LeetCode.longestSubstringWithoutRepeatingCharacters.strStr;
+package LeetCode.longestSubstringWithoutRepeatingCharacters;
 
 /*
 Given a string, find the length of the longest substring without repeating characters.
