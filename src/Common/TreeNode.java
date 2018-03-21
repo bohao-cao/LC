@@ -5,5 +5,4 @@ public class TreeNode {
         public Common.TreeNode left;
         public Common.TreeNode right;
         TreeNode(int x) { val = x; }
-
 }

@@ -20,4 +20,23 @@ class SolutionTest {
         int ret = s.ladderLength("a", "c", Arrays.asList(new String[]{"a","b","c"}));
         assertEquals(2,ret);
     }
+
+    @Test
+    void ladderLengthTest3() {
+        Solution s = new Solution();
+        int ret = s.ladderLength("leet", "code", Arrays.asList(new String[]{"lest","leet","lose","code","lode","robe","lost"}));
+        assertEquals(6,ret);
+    }
+
+    @Test
+    void isMatchTest() {
+        Solution s = new Solution();
+        assertTrue(s.isMatch("leet","lest"));
+    }
+
+    @Test
+    void isMatchTest2() {
+        Solution s = new Solution();
+        assertTrue(s.isMatch("lest","lose"));
+    }
 }
