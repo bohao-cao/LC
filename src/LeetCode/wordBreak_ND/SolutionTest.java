@@ -1,4 +1,4 @@
-package LeetCode.wordBreak;
+package LeetCode.wordBreak_ND;
 
 import org.junit.jupiter.api.Test;
 
