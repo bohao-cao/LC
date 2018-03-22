@@ -11,7 +11,7 @@ public class Solution {
             prev = p;
             p = t;
         }
-        
+
         return prev;
     }
 }
