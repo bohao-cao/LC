@@ -1,4 +1,4 @@
-package LeetCode.wordLadder;
+package LeetCode.wordLadder_ND;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +25,7 @@ class SolutionTest {
     void ladderLengthTest3() {
         Solution s = new Solution();
         int ret = s.ladderLength("leet", "code", Arrays.asList(new String[]{"lest","leet","lose","code","lode","robe","lost"}));
-        assertEquals(6,ret);
+        assertEquals(5,ret);
     }
 
     @Test

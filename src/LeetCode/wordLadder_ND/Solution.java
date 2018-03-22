@@ -1,4 +1,4 @@
-package LeetCode.wordLadder;
+package LeetCode.wordLadder_ND;
 
 import java.util.*;
 
