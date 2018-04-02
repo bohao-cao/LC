@@ -1,4 +1,4 @@
-package LeetCode.rotateImage_N;
+package LeetCode.rotateImage;
 
 /* https://leetcode.com/problems/rotate-image/description/
 You are given an n x n 2D matrix representing an image.
@@ -42,6 +42,25 @@ You are given an n x n 2D matrix representing an image.
         ]*/
 public class Solution {
     public void rotate(int[][] matrix) {
+        int n = matrix.length-1;
+        for(int i=0;i<matrix.length;i++) {
+            for(int j=0;j<matrix.length;j++){
+                if(doSwap(i,j,n)){
+                    int a = matrix[i][j];
+                    int b = matrix[j][n-i];
+                    int c = matrix[n-i][n-j];
+                    int d = matrix[n-j][i];
+                    matrix[i][j]= d;
+                    matrix[j][n-i] = a;
+                    matrix[n-i][n-j] = b;
+                    matrix[n-j][i] = c;
+                }
+            }
+        }
 
+    }
+
+    private boolean doSwap(int i, int j, int n){
+        return i<=n/2 && j>=i&& j<=n-i-1;
     }
 }
