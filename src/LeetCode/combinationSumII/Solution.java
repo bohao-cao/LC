@@ -19,12 +19,13 @@ public class Solution {
         }
 
         for(int i=start; i<c.length;i++){
+            if(i> start && c[i]==c[i-1])  continue;
             tempList.add(c[i]);
             sum+=c[i];
             if(sum== target)
                 res.add(new ArrayList<>(tempList));
             else
-                backtrack(c, target, start+1, sum, tempList);
+                backtrack(c, target, i+1, sum, tempList);
 
             sum-=c[i];
             tempList.remove(tempList.size()-1);

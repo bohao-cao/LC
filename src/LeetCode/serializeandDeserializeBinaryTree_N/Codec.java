@@ -3,6 +3,8 @@ package LeetCode.serializeandDeserializeBinaryTree_N;
 
 import Common.TreeNode;
 
+import java.util.*;
+
 /*
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
 Serialization is the process of converting a data structure or object into a sequence of bits
@@ -33,12 +35,53 @@ public class Codec {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        return null;
+        if(root==null )
+            return null;
+        StringBuilder sb = new StringBuilder();
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while(!q.isEmpty()){
+            TreeNode n = q.poll();
+            sb.append(n==null? "null": String.valueOf(n.val)).append(",");
+            if(n != null) {
+                q.add(n.left);
+                q.add(n.right);
+            }
+        }
+
+        return sb.substring(0, sb.length() -1);
     }
+
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
-        return null;
+        if(data == null || data.length() ==0)
+            return null;
+        List<String> l = Arrays.asList(data.split(","));
+        Queue<TreeNode> q = new LinkedList<>();
+        TreeNode root = new TreeNode(Integer.valueOf(l.get(0)));
+        q.add(root);
+        for(int i=1;i< l.size();i++){
+            TreeNode v = q.poll();
+            if(!Objects.equals(l.get(i),"null")){
+                v.left = new TreeNode(Integer.valueOf(l.get(i)));
+                q.add(v.left);
+            }
+            else
+                v.left = null;
+            if(!Objects.equals(l.get(i+1) , "null")){
+                v.right = new TreeNode(Integer.valueOf(l.get(i+1)));
+                q.add(v.right);
+            }
+            else
+                v.right = null;
+            i++;
+
+
+        }
+        return root;
+
     }
 }
 

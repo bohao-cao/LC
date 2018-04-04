@@ -1,4 +1,4 @@
-package LeetCode.subsets_N;
+package LeetCode.subsets;
 
 import java.util.*;
 
@@ -9,12 +9,12 @@ import java.util.*;
 
 
 /* https://leetcode.com/problems/subsets/description/
-Given a set of distinct integers, nums, return all possible subsets_N (the power set).
+Given a set of distinct integers, nums, return all possible subsets (the power set).
 
-        Note: The solution set must not contain duplicate subsets_N.
+        Note: The Solution set must not contain duplicate subsets.
 
         For example,
-        If nums = [1,2,3], a solution is:
+        If nums = [1,2,3], a Solution is:
 
         [
         [3],
