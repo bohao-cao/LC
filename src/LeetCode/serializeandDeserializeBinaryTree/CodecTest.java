@@ -1,9 +1,7 @@
-package LeetCode.serializeandDeserializeBinaryTree_N;
+package LeetCode.serializeandDeserializeBinaryTree;
 
 import Common.TreeNode;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CodecTest {
     @Test
