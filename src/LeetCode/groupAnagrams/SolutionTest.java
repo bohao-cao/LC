@@ -13,7 +13,6 @@ class SolutionTest {
         String[] input = new String[]{"eat","tea","tan","ate","nat","bat"};
         Solution2 s = new Solution2();
         List<List<String>> ret = s.groupAnagrams(input);
-
     }
 
     @Test
