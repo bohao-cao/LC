@@ -1,4 +1,4 @@
-package LeetCode.serializeandDeserializeBinaryTree_N;
+package LeetCode.serializeandDeserializeBinaryTree;
 
 
 import Common.TreeNode;
