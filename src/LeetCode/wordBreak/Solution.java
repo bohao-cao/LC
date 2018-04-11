@@ -1,6 +1,6 @@
-package LeetCode.wordBreak_ND;
-import java.util.Arrays;
-import java.util.List;
+package LeetCode.wordBreak;
+import java.util.*;
+
 /*Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.
 
         For example, given
@@ -17,6 +17,31 @@ public class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
         return dpSolution(s, wordDict);
 
+    }
+
+    public boolean bfsSolution(String s, List<String> wordDict){
+        Queue<Integer> q = new LinkedList<>();
+        Set<Integer> visited = new HashSet<>();
+        q.add(0);
+
+        while(!q.isEmpty()){
+            int start = q.poll();
+            for(int i=start;i< s.length()+1;i++){
+                if(visited.contains(i))
+                    continue;
+                String toSearch = s.substring(start,i);
+                if(wordDict.contains(toSearch)){
+                    if(i==s.length())
+                        return true;
+                    q.add(i);
+                    visited.add(i);
+                }
+
+            }
+
+        }
+
+        return false;
     }
 
     private boolean dpSolution(String s, List<String> wordDict){

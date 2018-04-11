@@ -1,0 +1,5 @@
+catsanddog
+
+cat->cat,sand->cats,sand,dog
+
+cats->cats,and->cats,and,dog
