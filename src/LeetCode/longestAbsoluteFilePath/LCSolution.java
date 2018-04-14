@@ -1,4 +1,9 @@
-package LeetCode.todo.longestAbsoluteFilePath;
+package LeetCode.longestAbsoluteFilePath;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 /*
 Suppose we abstract our file system by a string in the following manner:
 
@@ -32,10 +37,26 @@ Suppose we abstract our file system by a string in the following manner:
 
         Notice that a/aa/aaa/file1.txt is not the longest file path, if there is another path aaaaaaaaaaaaaaaaaaaaa/sth.png.
 */
-public class Solution {
+public class LCSolution {
 
-    public int lengthLongestPath(String input) {
 
+    public  int lengthLongestPath(String input) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(0);  // Layer 0, dummy head
+        int maxLen = 0;
+        for(String s : input.split("\n")) {
+            int layer = s.lastIndexOf("\t") + 1;    // e.g. Layer 2 s: "\t\tsubsubdir1"
+            while(layer < stack.size() - 1)
+                stack.pop();
+            int length = stack.peek() + s.length() - layer + 1; // remove "\t\t..." add "\"
+            if(layer == 0)  // dir has no "\t" in the front
+                length--;
+            if(s.contains("."))
+                maxLen = Math.max(maxLen, length);
+            else
+                stack.push(length);
+        }
+        return maxLen;
     }
 
 }

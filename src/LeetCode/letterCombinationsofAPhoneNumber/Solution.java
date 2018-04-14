@@ -5,7 +5,7 @@ import java.util.*;
 public class Solution {
     public List<String> letterCombinations(String digits) {
         if(digits == null || digits.isEmpty())
-            return new ArrayList<>() {};
+            return new ArrayList() {};
         HashMap<Integer, char[]> map = new HashMap<>();
         map.put(1, new char[0]);
         map.put(2, new char[]{'a','b','c'});
