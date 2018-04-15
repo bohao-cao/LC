@@ -6,3 +6,8 @@
 *.class
 
 .idea/workspace.xml
+.idea/misc.xml
+.DS_Store
+.idea/misc.xml
+.idea/workspace.xml
+LC.iml
