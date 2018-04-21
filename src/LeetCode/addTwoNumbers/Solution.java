@@ -17,6 +17,7 @@ public class Solution {
         ListNode ret = new ListNode(0);
         ListNode p1 = l1, p2 = l2, p = ret;
         int carry = 0;
+
         while(p1 != null && p2 != null){
             int number = (p1.val + p2.val + carry)%10;
             carry = (p1.val + p2.val + carry)/10;
