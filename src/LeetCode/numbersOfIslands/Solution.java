@@ -1,7 +1,6 @@
 package LeetCode.numbersOfIslands;
 
 import java.util.AbstractMap;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -42,7 +41,6 @@ public class Solution {
     private int bfsSolution(char[][] g){
         Queue<AbstractMap.SimpleEntry<Integer, Integer>> q= new LinkedList<>();
         int islands = 0;
-        //AbstractMap.SimpleEntry<Integer, Integer> e = new AbstractMap.SimpleEntry<Integer, Integer>();
 
         for(int i=0; i< g.length; i++){
             for(int j=0;j< g[i].length;j++){
