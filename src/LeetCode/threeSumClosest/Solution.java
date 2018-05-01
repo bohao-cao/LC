@@ -5,7 +5,7 @@ Given array nums = [-1, 2, 1, -4], and target = 1.
 The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 */
 public class Solution {
-    //this solution does not sort, so it's very slow
+    //this solution does not Sort, so it's very slow
     //the solution that uses 3 pointers is 10x faster.
     public int threeSumClosest(int[] nums, int target) {
         backtrack(nums, target, 0, 0, 0);
