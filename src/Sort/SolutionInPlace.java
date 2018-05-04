@@ -31,4 +31,31 @@ public class SolutionInPlace {
         return input;
 
     }
+
+    public int[] sortOnePass(int[] input){
+        for(int i =0;i< input.length;i++){
+            if(input[i]<0){
+                int j = i-1;
+                while(j>=0 && input[j]>=0){
+                    swap(input, j, j+1);
+                    j--;
+                }
+            }
+            else if(input[i]==0){
+                int j= i-1;
+                while(j>=0 && input[j]>0){
+                    swap(input, j,j+1);
+                    j--;
+                }
+            }
+        }
+
+        return input;
+    }
+
+    private void swap(int[] input, int i, int j){
+        int t = input[i];
+        input[i] = input[j];
+        input[j] = t;
+    }
 }
