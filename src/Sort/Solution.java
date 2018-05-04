@@ -7,10 +7,10 @@ public class Solution {
     public int[] sort(int[] input){
         Queue<Integer> negatives = new ArrayDeque<>();
         Queue<Integer> positives = new ArrayDeque<>();
-        boolean hasZero = false;
+        int zeroCount = 0;
         for(int i: input){
             if(i==0)
-                hasZero =true;
+                zeroCount++;
             else if(i<0)
                 negatives.add(i);
             else
@@ -19,7 +19,7 @@ public class Solution {
         int i=0;
         while (!negatives.isEmpty())
             input[i++]=negatives.poll();
-        if(hasZero)
+        while(zeroCount-- > 0)
             input[i++]=0;
         while(!positives.isEmpty())
             input[i++]=positives.poll();
