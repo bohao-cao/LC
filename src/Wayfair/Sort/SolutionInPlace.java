@@ -1,4 +1,4 @@
-package Sort;
+package Wayfair.Sort;
 
 public class SolutionInPlace {
     public int[] sort(int[] input){
