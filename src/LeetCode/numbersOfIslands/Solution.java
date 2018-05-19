@@ -2,6 +2,7 @@ package LeetCode.numbersOfIslands;
 
 import java.util.AbstractMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 //https://leetcode.com/problems/number-of-islands/solution/
@@ -39,7 +40,7 @@ public class Solution {
     }
 
     private int bfsSolution(char[][] g){
-        Queue<AbstractMap.SimpleEntry<Integer, Integer>> q= new LinkedList<>();
+        Queue<Map.Entry<Integer, Integer>> q= new LinkedList<>();
         int islands = 0;
 
         for(int i=0; i< g.length; i++){

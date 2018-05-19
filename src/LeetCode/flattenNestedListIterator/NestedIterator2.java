@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class NestedIterator2 implements Iterator<Integer> {
+    //Important, queue is of type integer, which stores the flattened integers in the order of the flattening.
     private Queue<NestedInteger> q = new ArrayDeque<>();
     private List<NestedInteger> nestedList;
     private int count = 0;

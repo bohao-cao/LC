@@ -18,16 +18,16 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
 * */
 public class Solution {
     public int findKthLargest(int[] nums, int k) {
-        Comparator<Integer> myComparator = new MyComparator();
-        Queue<Integer> pq = new PriorityQueue<Integer>(myComparator);
+        Queue<Integer> pq = new PriorityQueue(new MyComparator());
 
         for(int i:nums)
             pq.add(i);
 
+        int res = 0;
         while(k-->0){
-            pq.poll();
+            res = pq.poll();
         }
-        return pq.poll();
+        return res;
     }
 
     private class MyComparator implements Comparator<Integer>{

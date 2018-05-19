@@ -12,7 +12,7 @@ public class Solution {
         return res;
 
     }
-    private int res = 100000;
+    private int res = Integer.MAX_VALUE;
     private void backtrack(int[] nums, int target, int idx, int count, int sum){
         if(count == 3){
             res = Math.abs(sum - target) < Math.abs(res-target) ? sum : res;

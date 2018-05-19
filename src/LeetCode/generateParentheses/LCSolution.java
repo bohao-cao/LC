@@ -7,10 +7,13 @@ class LCSolution {
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList();
         backtrack(ans, "", 0, 0, n);
+        System.out.println(c);
         return ans;
     }
+    static int c = 0;
 
     public void backtrack(List<String> ans, String cur, int open, int close, int max){
+        c++;
         if (cur.length() == max * 2) {
             ans.add(cur);
             return;

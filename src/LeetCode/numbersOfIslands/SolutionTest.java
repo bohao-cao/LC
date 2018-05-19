@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NumbersOfIslandsTest {
+class SolutionTest {
     @Test
     void numIslands() {
         char[][] grid = new char[][]

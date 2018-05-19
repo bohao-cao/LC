@@ -8,7 +8,7 @@ public class Solution {
         return lca(root, p,q);
     }
 
-    public TreeNode lca(TreeNode node, TreeNode p, TreeNode q){
+    private TreeNode lca(TreeNode node, TreeNode p, TreeNode q){
         if(node == null) return null;
         if(node == p || node == q) return node;
         TreeNode l = lca(node.left, p, q);

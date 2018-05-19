@@ -11,4 +11,16 @@ class SolutionTest {
         assertEquals(321, s.reverse(123));
     }
 
+    @Test
+    void reverse2() {
+        Solution s = new Solution();
+        assertEquals(21, s.reverse(120));
+    }
+
+    @Test
+    void reverse3() {
+        Solution s = new Solution();
+        assertEquals(-5, s.reverse(-500));
+    }
+
 }

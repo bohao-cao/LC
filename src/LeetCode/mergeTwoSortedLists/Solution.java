@@ -28,8 +28,9 @@ public class Solution {
             }
             r = r.next;
         }
-        ListNode t = p1 == null ? p2 : p1;
 
+        //append the rest to the result.
+        ListNode t = p1 == null ? p2 : p1;
         while(t != null){
             r.next = new ListNode(t.val);
             r = r.next;

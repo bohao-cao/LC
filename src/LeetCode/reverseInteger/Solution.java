@@ -16,7 +16,8 @@ public class Solution {
             j--;
         }
 
-        return Long.valueOf(new String(c)) > Integer.MIN_VALUE ? 0: Integer.valueOf(new String(c));
+        //return Long.valueOf(new String(c)) > Integer.MIN_VALUE ? 0: Integer.valueOf(new String(c));
+        return Integer.valueOf(new String(c));
     }
 
 }

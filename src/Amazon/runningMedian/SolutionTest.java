@@ -11,18 +11,17 @@ class SolutionTest {
     @Test
     void runningMedian() {
 
-        //Solution s = new Solution();
+        //RecurseSolution s = new RecurseSolution();
         PriorityQueueSolution s = new PriorityQueueSolution();
         int[] input = new int[]{12, 4, 5, 3, 8, 7};
         double[] exp = new double[]{12.0, 8.0, 5.0, 4.5, 5.0, 6.0};
         double[] x = s.runningMedian(input);
         assertTrue(Arrays.equals(exp, x));
     }
-
     @Test
     void runningMedian2() {
 
-        //Solution s = new Solution();
+        //RecurseSolution s = new RecurseSolution();
         PriorityQueueSolution s = new PriorityQueueSolution();
         int[] input = new int[]{1,
                 2,

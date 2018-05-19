@@ -11,10 +11,10 @@ import java.util.*;
 /* https://leetcode.com/problems/subsets/description/
 Given a set of distinct integers, nums, return all possible subsets (the power set).
 
-        Note: The Solution set must not contain duplicate subsets.
+        Note: The RecurseSolution set must not contain duplicate subsets.
 
         For example,
-        If nums = [1,2,3], a Solution is:
+        If nums = [1,2,3], a RecurseSolution is:
 
         [
         [3],
@@ -29,7 +29,7 @@ Given a set of distinct integers, nums, return all possible subsets (the power s
 public class Solution {
     public List<List<Integer>> subsets(int[] nums)
     {
-        Arrays.sort(nums);
+        //Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         backtrack(nums, res, new ArrayList<>(), 0);
 

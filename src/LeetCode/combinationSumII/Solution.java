@@ -14,12 +14,11 @@ public class Solution {
     }
     private void backtrack(int[]c, int target, int start, int sum, List<Integer> tempList){
         if(sum> target)
-        {
             return;
-        }
 
         for(int i=start; i<c.length;i++){
-            if(i> start && c[i]==c[i-1])  continue;
+            if(i> start && c[i]==c[i-1])
+                continue;
             tempList.add(c[i]);
             sum+=c[i];
             if(sum== target)

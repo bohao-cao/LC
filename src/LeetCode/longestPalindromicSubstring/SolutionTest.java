@@ -33,7 +33,7 @@ class SolutionTest {
     @org.junit.jupiter.api.Test
     void test4() {
         Solution2 s = new Solution2();
-        Assertions.assertEquals("bab", s.longestPalindrome("babad"));
+        Assertions.assertEquals("aba", s.longestPalindrome("babad"));
     }
 
     @org.junit.jupiter.api.Test
